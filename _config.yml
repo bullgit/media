@@ -1,0 +1,5 @@
+collections:
+  pixels:
+    output: true
+  vectors:
+    output: true
