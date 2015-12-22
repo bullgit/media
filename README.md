@@ -2,5 +2,5 @@
 
 > bullgit logo and artwork
 
-[![](_pixels/bullgit-logo.png)](Logo)
+[![Logo](_pixels/bullgit-logo.png)](_pixels/bullgit-logo.png)
 
