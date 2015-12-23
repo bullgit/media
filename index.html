@@ -22,9 +22,9 @@
         <h2>Pixels</h2>
 
         <ul>
-        {% for post in site.pixels %}
+        {% for image in site.collections.pixels.files %}
             <li>
-                <a href="{{ post.url }}">{{ post.url }}</a>
+                <a href="{{ image.path }}">{{ image.path }}</a>
             </li>
         {% endfor %}
         </ul>
@@ -32,9 +32,9 @@
         <h2>Vectors</h2>
 
         <ul>
-        {% for post in site.vectors %}
+        {% for image in site.collections.vectors.files %}
             <li>
-                <a href="{{ post.url }}">{{ post.url }}</a>
+                <a href="{{ image.path }}">{{ image.path }}</a>
             </li>
         {% endfor %}
         </ul>
