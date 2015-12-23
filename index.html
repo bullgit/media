@@ -65,7 +65,11 @@
         </ul>
         
         {% for collection in site.collections %}
-        {{collection}}
+            {% for image in collection.files %}
+                <li>
+                    <a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
+                </li>
+            {% endfor %}
         {% endfor %}
 
         <footer>
