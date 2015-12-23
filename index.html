@@ -44,38 +44,15 @@
 </head>
     <body>
         <h1>Media</h1>
-
         <p>All our media files are here.</p>
-
-        <h2>Pixels</h2>
-
-        <ul>
-        {% for image in site.collections.pixels.files %}
-            <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
-        {% endfor %}
-        </ul>
-
-        <h2>Vectors</h2>
-
-        <ul>
-        {% for image in site.collections.vectors.files %}
-            <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
-        {% endfor %}
-        </ul>
-        
-        <div class="invisible">
-            {% for collection in site.collections %}
-                <h2>{{collection[0]}}</h2>
-                <ul>
-                {% for image in collection[1].files %}
-                    <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
-                {% endfor %}     
-                </ul>
-         
-            {% endfor %}           
-        </div>
-
-
+        {% for collection in site.collections %}
+            <h2>{{collection[0]}}</h2>
+            <ul>
+            {% for image in collection[1].files %}
+                <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
+            {% endfor %}     
+            </ul>
+        {% endfor %}           
         <footer>
         <p>By <a href="https://bullg.it">bullgit</a>. Find this on <a href="https://github.com/bullgit/media">GitHub</a>.</p>
         </footer>
