@@ -24,7 +24,7 @@
         <ul>
         {% for image in site.collections.pixels.files %}
             <li>
-                <a href="{{ image.path }}">{{ image.path }}</a>
+                <a href="{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
             </li>
         {% endfor %}
         </ul>
@@ -34,16 +34,10 @@
         <ul>
         {% for image in site.collections.vectors.files %}
             <li>
-                <a href="{{ image.path }}">{{ image.path }}</a>
+                <a href="{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
             </li>
         {% endfor %}
         </ul>
-
-        <h2>test</h2>
-        
-        {% for a in site.collections.pixels.files %}
-        <p>hey {{a}}!</p>
-        {% endfor %}
 
         <footer>
         <p>By <a href="https://bullg.it">bullgit</a></p>
