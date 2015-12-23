@@ -67,7 +67,7 @@
             {% for collection in site.collections %}
                 <h2>{{collection[0]}}</h2>
                 <ul>
-                {% for image in collection.files %}
+                {% for image in collection[1].files %}
                     <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
                 {% endfor %}     
                 </ul>
