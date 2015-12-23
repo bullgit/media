@@ -37,6 +37,9 @@
         h1,h2 {
             color: #1393d5;
         }
+        .invisible {
+            display: none;
+        }
     </style>
 </head>
     <body>
@@ -48,9 +51,7 @@
 
         <ul>
         {% for image in site.collections.pixels.files %}
-            <li>
-                <a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
-            </li>
+            <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
         {% endfor %}
         </ul>
 
@@ -58,22 +59,25 @@
 
         <ul>
         {% for image in site.collections.vectors.files %}
-            <li>
-                <a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
-            </li>
+            <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
         {% endfor %}
         </ul>
         
-        {% for collection in site.collections %}
-            {% for image in collection.files %}
-                <li>
-                    <a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
-                </li>
-            {% endfor %}
-        {% endfor %}
+        <div class="invisible">
+            {% for collection in site.collections %}
+                <h2>{{collection.name}}</h2>
+                <ul>
+                {% for image in collection.files %}
+                    <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
+                {% endfor %}     
+                </ul>
+         
+            {% endfor %}           
+        </div>
+
 
         <footer>
-        <p>By <a href="https://bullg.it">bullgit</a></p>
+        <p>By <a href="https://bullg.it">bullgit</a></p>. Find this on <a href="https://github.com/bullgit/media">GitHub</a>.
         </footer>
     </body>
 </html>
