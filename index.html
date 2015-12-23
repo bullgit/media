@@ -63,6 +63,10 @@
             </li>
         {% endfor %}
         </ul>
+        
+        {% for collection in site.collections %}
+        {{collection}}
+        {% endfor %}
 
         <footer>
         <p>By <a href="https://bullg.it">bullgit</a></p>
