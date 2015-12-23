@@ -24,7 +24,7 @@
         <ul>
         {% for image in site.collections.pixels.files %}
             <li>
-                <a href="{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
+                <a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
             </li>
         {% endfor %}
         </ul>
@@ -34,7 +34,7 @@
         <ul>
         {% for image in site.collections.vectors.files %}
             <li>
-                <a href="{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
+                <a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a>
             </li>
         {% endfor %}
         </ul>
