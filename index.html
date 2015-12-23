@@ -65,7 +65,7 @@
         
         <div class="invisible">
             {% for collection in site.collections %}
-                <h2>{{collection.label}}</h2>.
+                <h2>{{collection}}</h2>.
                 <ul>
                 {% for image in collection.files %}
                     <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
