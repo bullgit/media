@@ -14,6 +14,9 @@
 	<link rel="icon" href="/media/pixels/bullgit-logo.png" />
 	<link rel="icon" type="image/png" href="/media/pixels/favicon.png" />
     <style>
+        *, *:before, *after {
+            box-sizing: inherit;
+        }
         html {
             background: #222;
             background: -moz-linear-gradient(top, #222 0%, #444 100%);
@@ -26,6 +29,7 @@
             height: 100%;
             width: 100%;
             padding: 1rem;
+            box-sizing: border-box;
         }
         body {
             padding: 1rem;
