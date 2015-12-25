@@ -12,4 +12,4 @@ That's it.
 
 # License
 
-All rights reserved.
+[VVL](https://github.com/bullgit/VVL), original logo by @0x04
