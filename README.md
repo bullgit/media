@@ -12,4 +12,4 @@ That's it.
 
 # License
 
-[VVL](https://github.com/bullgit/VVL), original logo by @0x04
+[VVL](https://github.com/bullgit/VVL/blob/master/VVL.md), original logo by @0x04
