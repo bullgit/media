@@ -47,55 +47,24 @@
         }
     </style>
 </head>
-    <body>
-        <h1>Media</h1>
-        <p>All our media files are here.</p>
-        {% for collection in site.collections %}
-            <h2>{{collection[0]}}</h2>
-            <ul>
-            {% for image in collection[1].files %}
-                <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
-            {% endfor %}
-            </ul>
+<body>
+    <h1>Media</h1>
+    <p>All our media files are here.</p>
+    {% for collection in site.collections %}
+    {% unless collection.label == 'posts' %}
+
+    <h2>{{collection.label}}</h2>
+    <ul>
+        {% for image in collection.files %}
+        <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
         {% endfor %}
-
-        <!-- workaround! -->
-        {% unless site.pixels.length > 0 %}
-            <!-- while the other version doesn't work -->
-            <h2>pixels</h2>
-            <ul>
-
-                <li><a href="/media/pixels/gitchbox.png">/pixels/gitchbox.png</a></li>
-
-                <li><a href="/media/pixels/favicon.png">/pixels/favicon.png</a></li>
-
-                <li><a href="/media/pixels/bullgit-logo.png">/pixels/bullgit-logo.png</a></li>
-
-            </ul>
-
-            <h2>vectors</h2>
-            <ul>
-
-                <li><a href="/media/vectors/bullgit-logo.ai">/vectors/bullgit-logo.ai</a></li>
-
-                <li><a href="/media/vectors/bullgit-logo.svg">/vectors/bullgit-logo.svg</a></li>
-
-                <li><a href="/media/vectors/bullgit-logo-animated.svg">/vectors/bullgit-logo-animated.svg</a></li>
-
-                <li><a href="/media/vectors/team-bullgit-dark.svg">/vectors/team-bullgit-dark.svg</a></li>
-
-                <li><a href="/media/vectors/team-bullgit-light.svg">/vectors/team-bullgit-light.svg</a></li>
-
-                <li><a href="/media/vectors/gitchbox.ai">/vectors/gitchbox.ai</a></li>
-
-                <li><a href="/media/vectors/gitchbox.svg">/vectors/gitchbox.svg</a></li>
-
-            </ul>
-        {% endunless %}
-        <footer>
+    </ul>
+    {% endunless %}
+    {% endfor %}
+    <footer>
         <p>By <a href="https://bullg.it">bullgit</a>. Find this on <a href="https://github.com/bullgit/media">GitHub</a>.</p>
-        </footer>
-    </body>
+    </footer>
+</body>
 </html>
 
 
