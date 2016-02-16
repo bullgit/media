@@ -1,5 +1,5 @@
 collections:
-  - pixels:
+  pixels:
     output: true
-  - vectors:
+  vectors:
     output: true
