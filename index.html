@@ -52,7 +52,6 @@
     <p>All our media files are here.</p>
     {% for collection in site.collections %}
     {% unless collection.label == 'posts' %}
-
     <h2>{{collection.label}}</h2>
     <ul>
         {% for image in collection.files %}
