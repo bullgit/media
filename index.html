@@ -55,7 +55,7 @@
     <h2>{{collection.label}}</h2>
     <ul>
         {% for image in collection.files %}
-        <li><a href="/media{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
+        <li><a href="{{site.baseurl}}{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
         {% endfor %}
     </ul>
     {% endunless %}

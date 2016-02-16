@@ -3,3 +3,4 @@ collections:
     output: true
   vectors:
     output: true
+baseurl: '/media'
