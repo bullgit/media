@@ -2,7 +2,7 @@
 
 > bullgit logo and artwork
 
-[![Logo](_vectors/bullgit-logo.svg)](_vectors/bullgit-logo.svg)
+[![Logo](_pixels/bullgit-logo.png)](_pixels/bullgit-logo.png)
 
 # Contributions
 
