@@ -4,66 +4,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title> bullgit media </title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-	<link rel="apple-touch-icon" href="/media/pixels/bullgit-logo.png" />
-	<link rel="icon" href="/media/pixels/bullgit-logo.png" />
-	<link rel="icon" type="image/png" href="/media/pixels/favicon.png" />
-    <style>
-        *, *:before, *after {
-            box-sizing: inherit;
-        }
-        html {
-            background: #222;
-            background: -moz-linear-gradient(top, #222 0%, #444 100%);
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #222), color-stop(100%, #444));
-            background: -webkit-linear-gradient(top, #222 0%, #444 100%);
-            background: -o-linear-gradient(top, #222 0%, #444 100%);
-            background: -ms-linear-gradient(top, #222 0%, #444 100%);
-            background: linear-gradient(to bottom, #222 0%, #444 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#444',GradientType=0 );
-            height: 100%;
-            width: 100%;
-            padding: 1rem;
-            box-sizing: border-box;
-        }
-        body {
-            padding: 1rem;
-            border-radius: .5em;
-            background-color: #fff;
-            font-family: Arial, sans-serif;
-            margin: 0 auto;
-            max-width: 54rem;
-        }
-        h1,h2 {
-            color: #1393d5;
-        }
-        .invisible {
-            display: none;
-        }
+	<title>bullgit media</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" href="/media/pixels/bullgit-logo.png">
+	<link rel="icon" href="/media/pixels/bullgit-logo.png">
+	<link rel="icon" type="image/png" href="/media/pixels/favicon.png">
+  <style>
+    *, *:before, *after {
+        box-sizing: inherit;
+    }
+    
+    html {
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+			background: #222;
+			background: linear-gradient(to bottom, #222 0%, #444 100%);
+			background: -webkit-linear-gradient(top, #222 0%, #444 100%);
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #222), color-stop(100%, #444));
+			background: -moz-linear-gradient(top, #222 0%, #444 100%);
+			background: -o-linear-gradient(top, #222 0%, #444 100%);
+			background: -ms-linear-gradient(top, #222 0%, #444 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#444',GradientType=0 );
+		}
+
+		body {
+			margin: 4% auto;
+			padding: 2%;
+			max-width: 60%;
+			min-width: 290px;
+			font-family: Helvetica, Arial, sans-serif;
+			border-radius: 10px;
+			background: #fff;
+		}
+    
+    h1, h2 {
+			color: #1393d5;
+		}
+
+		a {
+			color: #1393d5;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: #000;
+		}
+
+		footer {
+			font-size: 9pt;
+		}
     </style>
 </head>
 <body>
-    <h1>Media</h1>
-    <p>All our media files are here.</p>
-    {% for collection in site.collections %}
-    {% unless collection.label == 'posts' %}
-    <h2>{{collection.label}}</h2>
-    <ul>
-        {% for image in collection.files %}
-        <li><a href="{{site.baseurl}}{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
-        {% endfor %}
-    </ul>
-    {% endunless %}
-    {% endfor %}
-    <footer>
-        <p>By <a href="https://bullg.it">bullgit</a>. Find this on <a href="https://github.com/bullgit/media">GitHub</a>.</p>
-    </footer>
+  <h1>bullgit media</h1>
+  <p>All our media files are stored here.</p>
+  {% for collection in site.collections %}
+  {% unless collection.label == 'posts' %}
+  <h2>{{collection.label}}</h2>
+  <ul>
+  	{% for image in collection.files %}
+  	<li><a href="{{site.baseurl}}{{ image.path | remove: "_" }}">{{ image.path | remove: "_" }}</a></li>
+  	{% endfor %}
+  </ul>
+  {% endunless %}
+  {% endfor %}
+  <footer>
+    <p>&copy;2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script> <a href="https://bullg.it">bullgit</a>. Find this on <a href="https://github.com/bullgit/media">GitHub</a>.</p>
+  </footer>
 </body>
 </html>
-
-
