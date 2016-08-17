@@ -35,6 +35,7 @@
     body {
       margin: 4% auto;
       padding: 2%;
+      position: relative;
       max-width: 60%;
       min-width: 290px;
       font-family: Helvetica, Arial, sans-serif;
@@ -60,6 +61,14 @@
       color: #000;
     }
 
+    #preview {
+      position: absolute;
+      top: 50%;
+      right: 20%;
+      transform: translate(50%,-50%);
+      width: 25%;
+    }
+
     footer {
       font-size: 9pt;
     }
@@ -82,5 +91,29 @@
   <footer>
     <p>Made by <a href="https://bullg.it">bullgit</a>. Find this on <a href="https://github.com/bullgit/media">GitHub</a>.</p>
   </footer>
+
+  <script>
+    var links = document.querySelectorAll('li a');
+    var preview = document.getElementById('preview');
+
+    function display_preview(activeLink) {
+     var source = activeLink.getAttribute('href');
+     preview.src = source;
+    }
+
+    function empty_preview() {
+     preview.src = '#'
+    }
+
+    for (var i = 0; i < links.length; i++ ) {
+     links[i].addEventListener('mouseover', function(){
+       display_preview(this)
+     });
+
+     links[i].addEventListener('mouseleave', function(){
+       empty_preview()
+     });
+    }
+  </script>
 </body>
 </html>
