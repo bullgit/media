@@ -93,7 +93,8 @@
   </footer>
 
   <script>
-    var links = document.querySelectorAll('li a');
+    window.onload = function() {
+      var links = document.querySelectorAll('li a');
     var preview = document.getElementById('preview');
 
     function display_preview(activeLink) {
@@ -113,6 +114,7 @@
      links[i].addEventListener('mouseleave', function(){
        empty_preview()
      });
+    }
     }
   </script>
 </body>
